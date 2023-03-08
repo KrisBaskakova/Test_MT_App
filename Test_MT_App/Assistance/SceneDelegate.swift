@@ -16,11 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
-    let navController = UINavigationController(rootViewController: BusStopListViewController())
-    
-    
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
+    let busStopViewController = ModulBuilder.createBusViewController()
+    let navController = UINavigationController(rootViewController: busStopViewController)
     window?.rootViewController = navController
     window?.makeKeyAndVisible()
     

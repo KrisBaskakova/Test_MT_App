@@ -7,35 +7,44 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 protocol BusStopViewProtocol: AnyObject {
   
 }
 
 protocol BusStopPresenterProtocol: AnyObject {
-  init(busStopView: BusStopViewProtocol, busStopModel: Stop)
-  
+  init(busStopModel: Stop, busStopView: BusStopViewProtocol)
+  func getStops() -> [CLLocation]
   
 }
 
 class BusStopPresenter: BusStopPresenterProtocol {
   
-  let busStopView: BusStopViewProtocol
   let busStopModel: Stop
-  
-  required init(busStopView: BusStopViewProtocol, busStopModel: Stop) {
+  let busStopView: BusStopViewProtocol
+  var busStopCoordinates: [CLLocation] = []
+ 
+  required init(busStopModel: Stop, busStopView: BusStopViewProtocol) {
     self.busStopView = busStopView
     self.busStopModel = busStopModel
   }
   
-  func getStops() {
-    NetworkService.shared.getStops { [weak self] stops in
-      self?.showStops(stops)
+  func getStops() -> [CLLocation] {
+    NetworkService.shared.getStopsFromApi { [weak self] stops in
+      //self?.showStops(stops)
       
+      for coordinate in stops {
+        let busStopCoordinates = CLLocation(latitude: coordinate.lat, longitude: coordinate.lon)
+    
+        self?.busStopCoordinates.append(busStopCoordinates)
+      }
     } failure: { error in
       print("error -> \(error)")
     }
+    return self.busStopCoordinates
   }
+  
   func showStops(_ stops: [Stop]) {
     // Show on map
   }

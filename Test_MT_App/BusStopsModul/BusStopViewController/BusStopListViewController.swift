@@ -6,18 +6,26 @@
 //
 
 import UIKit
+import CoreLocation
 
 class BusStopListViewController: UIViewController {
 
   private lazy var tableView = UITableView()
-  private let network = NetworkService.shared.getData()
-  var busStopPresenter: BusStopPresenterProtocol!
+  // private let network = NetworkService.shared.getData()
+  var busStoprPesenter: BusStopPresenterProtocol!
+  var coordinates: [CLLocation] {
+    busStoprPesenter.getStops()
+  }
+ 
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
+    busStoprPesenter.getStops()
   }
 
+  // MARK: Setup UI
+  
   private func setupUI() {
     setupHierarchy()
     setupConstraints()
@@ -58,13 +66,14 @@ class BusStopListViewController: UIViewController {
 
 extension BusStopListViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return network.count
+    return 5
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "stopCell") as! StopsTableViewCell
     cell.selectionStyle = .none
-    cell.set(model: network[indexPath.row])
+    cell.textLabel?.text = "BusStop"
+    //cell.set(model: network[indexPath.row])
     
     return cell
     
@@ -72,4 +81,10 @@ extension BusStopListViewController: UITableViewDataSource, UITableViewDelegate 
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.navigationController?.pushViewController(MapViewController(), animated: true)  }
+}
+
+// MARK: BusStopViewProtocol extension
+
+extension BusStopListViewController: BusStopViewProtocol {
+  // если презентер что-то прислал показать
 }

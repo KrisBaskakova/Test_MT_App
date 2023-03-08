@@ -20,6 +20,6 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Позвольте нам получить доступ к вашему текущему местоположению</string>
+	<string>Please allow location access to use</string>
 </dict>
 </plist>
