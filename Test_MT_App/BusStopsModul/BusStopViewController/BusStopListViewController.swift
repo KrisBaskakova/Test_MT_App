@@ -8,20 +8,33 @@
 import UIKit
 import CoreLocation
 
-class BusStopListViewController: UIViewController {
+final class BusStopListViewController: UIViewController {
 
-  private lazy var tableView = UITableView()
-  // private let network = NetworkService.shared.getData()
-  var busStoprPesenter: BusStopPresenterProtocol!
-  var coordinates: [CLLocation] {
-    busStoprPesenter.getStops()
+  let output: BusStopPresenterProtocol
+  
+  var stops: [Stop]? {
+    didSet {
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+    }
   }
- 
+  
+  private lazy var tableView = UITableView()
+  
+  init(output: BusStopPresenterProtocol) {
+    self.output = output
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
-    busStoprPesenter.getStops()
+    output.viewDidLoad()
   }
 
   // MARK: Setup UI
@@ -66,17 +79,15 @@ class BusStopListViewController: UIViewController {
 
 extension BusStopListViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    return stops?.count ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let model = stops?[indexPath.row] else { return UITableViewCell() }
     let cell = tableView.dequeueReusableCell(withIdentifier: "stopCell") as! StopsTableViewCell
     cell.selectionStyle = .none
-    cell.textLabel?.text = "BusStop"
-    //cell.set(model: network[indexPath.row])
-    
+    cell.textLabel?.text = model.name
     return cell
-    
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -86,5 +97,6 @@ extension BusStopListViewController: UITableViewDataSource, UITableViewDelegate 
 // MARK: BusStopViewProtocol extension
 
 extension BusStopListViewController: BusStopViewProtocol {
-  // если презентер что-то прислал показать
+
+  
 }

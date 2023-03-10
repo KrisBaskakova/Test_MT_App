@@ -1,5 +1,5 @@
 //
-//  ModelWithCoordinates.swift
+//  Stop.swift
 //  Test_MT_App
 //
 //  Created by Кристина Баскакова on 28.02.2023.

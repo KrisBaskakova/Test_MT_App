@@ -30,9 +30,8 @@ class StopsTableViewCell: UITableViewCell {
   }
   
   
-  func set(model: StopsModel) {
+  func set(model: Stop) {
     stopNameLabel.text = "\(model.name)"
-    rournumberLabel.text = "\(model.routNumber)"
   }
   
   
@@ -91,7 +90,7 @@ class StopsTableViewCell: UITableViewCell {
   private func setStopNameLabelConstraints() {
     stopNameLabel.translatesAutoresizingMaskIntoConstraints = false
     stopNameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 14).isActive = true
-    stopNameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 72).isActive = true
+    stopNameLabel.leadingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 16).isActive = true
   }
   
 }

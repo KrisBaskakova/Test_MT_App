@@ -7,63 +7,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E3A26627-3BE0-4952-8C90-BE4285144BCA"
-            shouldBeEnabled = "No"
+            uuid = "717D51A7-94EA-46E7-A349-C0219D7FDE61"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Test_MT_App/Network/Network.swift"
+            filePath = "Test_MT_App/BusStopsModul/BusStopViewController/BusStopListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getStopsFromApi(success:failure:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A73FB9A5-78AB-457D-9F03-DA5A4966C6C4"
-            shouldBeEnabled = "No"
+            uuid = "0082E535-BA33-446E-9665-04B22AA96BD1"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Test_MT_App/Network/Network.swift"
+            filePath = "Test_MT_App/BusStopsModul/BusStopViewController/BusStopListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "getStopsFromApi(success:failure:)"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "340750CF-89EA-4CC8-9EBA-25E86668240B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Test_MT_App/BusStopsModul/BusStopPresenter/BusStopPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A73FB9A5-78AB-457D-9F03-DA5A4966C6C4 - fedc3b9a74eb3ca0"
+                  uuid = "340750CF-89EA-4CC8-9EBA-25E86668240B - 1738a80c4026b3c8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Test_MT_App.NetworkService.getStopsFromApi(success: (Swift.Array&lt;Test_MT_App.Stop&gt;) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Test_MT_App.BusStopPresenter.viewDidLoad() -&gt; ()"
                   moduleName = "Test_MT_App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/Network/Network.swift"
+                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/BusStopsModul/BusStopPresenter/BusStopPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "384">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "32">
                </Location>
                <Location
-                  uuid = "A73FB9A5-78AB-457D-9F03-DA5A4966C6C4 - fedc3b9a74eb3ca0"
+                  uuid = "340750CF-89EA-4CC8-9EBA-25E86668240B - 1aa40c4446688f92"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Test_MT_App.NetworkService.getStopsFromApi(success: (Swift.Array&lt;Test_MT_App.Stop&gt;) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Array&lt;Test_MT_App.Stop&gt;) -&gt; () in Test_MT_App.BusStopPresenter.viewDidLoad() -&gt; ()"
                   moduleName = "Test_MT_App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/Network/Network.swift"
+                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/BusStopsModul/BusStopPresenter/BusStopPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "504">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -71,81 +87,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9B55AFC0-C385-4A91-B8DD-3B3EBDC0BAC5"
-            shouldBeEnabled = "No"
+            uuid = "095072C4-EBD9-4584-AA00-F3F010984547"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Test_MT_App/MapViewController.swift"
+            filePath = "Test_MT_App/BusStopsModul/BusStopPresenter/BusStopPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FDB8AFC8-1C0C-47A8-90C7-60173D579A61"
+            uuid = "453129CD-0038-41BA-85B2-36765EE74041"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Test_MT_App/BusStopsModul/BusStopPresenter/BusStopPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "getStops()"
-            landmarkType = "7">
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "BusStopViewProtocol"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BFC76C9E-6828-4DEE-967E-7DD2DDB75A74"
+            uuid = "817538E7-BAAA-4F97-816E-A13F8F6AA573"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Test_MT_App/BusStopsModul/BusStopPresenter/BusStopPresenter.swift"
+            filePath = "Test_MT_App/BusStopsModul/BusStopViewController/BusStopListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "getStops()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "10631E93-088A-4700-898F-1711B9CB6051"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Test_MT_App/BusStopsModul/BusStopPresenter/BusStopPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "getStops()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "69F076B0-14F4-46A9-B948-95B8A6E10440"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Test_MT_App/BusStopsModul/BusStopPresenter/BusStopPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "getStops()"
-            landmarkType = "7">
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "stops"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
