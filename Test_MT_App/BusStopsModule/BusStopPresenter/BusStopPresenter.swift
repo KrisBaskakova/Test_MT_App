@@ -29,6 +29,5 @@ extension BusStopPresenter: BusStopPresenterProtocol {
       self?.view?.stops = stops
     } failure: { _ in
     }
-
   }
 }

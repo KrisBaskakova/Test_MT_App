@@ -19,7 +19,7 @@
 		1087133429B1B3CF007A157C /* BusStopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1087133329B1B3CF007A157C /* BusStopListViewController.swift */; };
 		10F508AD29B1DFD50045462B /* ModulBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F508AC29B1DFD50045462B /* ModulBuilder.swift */; };
 		10F508B029B2983D0045462B /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F508AF29B2983D0045462B /* MapPresenter.swift */; };
-		10F508B229B2B34E0045462B /* DetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F508B129B2B34E0045462B /* DetailMapView.swift */; };
+		10F508B229B2B34E0045462B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F508B129B2B34E0045462B /* DetailView.swift */; };
 		10F508B429B819EC0045462B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F508B329B819EC0045462B /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		1087133329B1B3CF007A157C /* BusStopListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopListViewController.swift; sourceTree = "<group>"; };
 		10F508AC29B1DFD50045462B /* ModulBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulBuilder.swift; sourceTree = "<group>"; };
 		10F508AF29B2983D0045462B /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
-		10F508B129B2B34E0045462B /* DetailMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapView.swift; sourceTree = "<group>"; };
+		10F508B129B2B34E0045462B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		10F508B329B819EC0045462B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,8 +72,9 @@
 		1087130929AEDAEE007A157C /* Test_MT_App */ = {
 			isa = PBXGroup;
 			children = (
-				10F508AE29B2981A0045462B /* MapModul */,
-				1087133029B1B1BD007A157C /* BusStopsModul */,
+				10F508B329B819EC0045462B /* LocationManager.swift */,
+				10F508AE29B2981A0045462B /* MapModule */,
+				1087133029B1B1BD007A157C /* BusStopsModule */,
 				1087132729AF17A8007A157C /* Network */,
 				1087132629AF1789007A157C /* Assistance */,
 				1087131329AEDAF0007A157C /* Assets.xcassets */,
@@ -125,14 +126,14 @@
 			path = BusStopPresenter;
 			sourceTree = "<group>";
 		};
-		1087133029B1B1BD007A157C /* BusStopsModul */ = {
+		1087133029B1B1BD007A157C /* BusStopsModule */ = {
 			isa = PBXGroup;
 			children = (
 				10F508AB29B1D9330045462B /* BusStopViewController */,
 				1087132F29B190FC007A157C /* BusStopPresenter */,
 				1087132529AF175F007A157C /* BusStopsModel */,
 			);
-			path = BusStopsModul;
+			path = BusStopsModule;
 			sourceTree = "<group>";
 		};
 		10F508AB29B1D9330045462B /* BusStopViewController */ = {
@@ -144,15 +145,14 @@
 			path = BusStopViewController;
 			sourceTree = "<group>";
 		};
-		10F508AE29B2981A0045462B /* MapModul */ = {
+		10F508AE29B2981A0045462B /* MapModule */ = {
 			isa = PBXGroup;
 			children = (
 				1087132929AF1CC0007A157C /* MapViewController.swift */,
-				10F508B329B819EC0045462B /* LocationManager.swift */,
 				10F508AF29B2983D0045462B /* MapPresenter.swift */,
-				10F508B129B2B34E0045462B /* DetailMapView.swift */,
+				10F508B129B2B34E0045462B /* DetailView.swift */,
 			);
-			path = MapModul;
+			path = MapModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +234,7 @@
 				1087132A29AF1CC0007A157C /* MapViewController.swift in Sources */,
 				10F508AD29B1DFD50045462B /* ModulBuilder.swift in Sources */,
 				1087133429B1B3CF007A157C /* BusStopListViewController.swift in Sources */,
-				10F508B229B2B34E0045462B /* DetailMapView.swift in Sources */,
+				10F508B229B2B34E0045462B /* DetailView.swift in Sources */,
 				1087132E29B190E8007A157C /* BusStopPresenter.swift in Sources */,
 				10F508B429B819EC0045462B /* LocationManager.swift in Sources */,
 			);

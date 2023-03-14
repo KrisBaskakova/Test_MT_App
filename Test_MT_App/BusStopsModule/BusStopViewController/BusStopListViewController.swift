@@ -86,12 +86,15 @@ extension BusStopListViewController: UITableViewDataSource, UITableViewDelegate 
     guard let model = stops?[indexPath.row] else { return UITableViewCell() }
     let cell = tableView.dequeueReusableCell(withIdentifier: "stopCell") as! StopsTableViewCell
     cell.selectionStyle = .none
-    cell.textLabel?.text = model.name
+    cell.set(model: model)
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    self.navigationController?.pushViewController(MapViewController(), animated: true)  }
+    guard let stops else { return }
+    let mapViewController = ModulBuilder.createMapViewController(stop: stops[indexPath.row])
+    self.navigationController?.pushViewController(mapViewController, animated: true)
+  }
 }
 
 // MARK: BusStopViewProtocol extension

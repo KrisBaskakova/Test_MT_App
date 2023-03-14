@@ -11,7 +11,6 @@ import CoreLocation
 final class NetworkService {
   
   static let shared = NetworkService()
-  var locationsCoordinates: [CLLocation] = []
   
   func getStopsFromApi(success: @escaping ([Stop]) -> Void, failure: @escaping (Error?) -> Void) {
     guard let url = URL(string: "https://api.mosgorpass.ru/v8.2/stop/near_v2?p=55,558741,37,378847")

@@ -20,6 +20,13 @@ class ModulBuilder: Builder {
     return viewController
   }
   
+  static func createMapViewController(stop: Stop) -> UIViewController {
+    let presenter = MapPresenter(stop: stop)
+    let viewController = MapViewController(output: presenter)
+    presenter.view = viewController
+    return viewController
+  }
+  
 }
 
 

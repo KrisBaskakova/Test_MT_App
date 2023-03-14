@@ -58,7 +58,7 @@ class StopsTableViewCell: UITableViewCell {
   }
   
   private func setupStopNameLabelConfiguration() {
-    stopNameLabel.font = .systemFont(ofSize: 16, weight: .bold)
+    stopNameLabel.font = .systemFont(ofSize: 18, weight: .bold)
   }
   
   private func setupRournumberLabelConfiguration() {
@@ -90,7 +90,7 @@ class StopsTableViewCell: UITableViewCell {
   private func setStopNameLabelConstraints() {
     stopNameLabel.translatesAutoresizingMaskIntoConstraints = false
     stopNameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 14).isActive = true
-    stopNameLabel.leadingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 16).isActive = true
+    stopNameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 72).isActive = true
   }
   
 }

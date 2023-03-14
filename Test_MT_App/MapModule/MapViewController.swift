@@ -9,35 +9,66 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MapViewProtocol {
   
+  let output: MapPresenterProtocol
+  
+  var stop: Stop? {
+    didSet {
+      updateMap(with: stop)
+    }
+  }
+
   private lazy var mapView = MKMapView()
-  private lazy var detailCard = UIView()
+  private lazy var detailCard = DetailView()
+  
+  //MARK: Init
+  
+  init(output: MapPresenterProtocol) {
+    self.output = output
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    output.viewDidLoad()
     setupUI()
-    LocationManager.shared.getCurrentLocation { [weak self] location in
-      DispatchQueue.main.async {
-        guard let currentLocation = self else { return }
-        currentLocation.addMapPin(with: location)
-      }
-    }
+    setupPins()
+    mapView.delegate = self
+  }
+  
+  func updateMap(with stop: Stop?) {
+    guard let stop else { return }
+    addMapPin(with: CLLocation(latitude: stop.lat, longitude: stop.lon))
+  }
+  
+  // MARK: Pins setup
+  
+  private func setupPins() {
+
+    
   }
   
   func addMapPin(with location: CLLocation) {
     
     let currentLocationPin = MKPointAnnotation()
     currentLocationPin.coordinate = location.coordinate
-    mapView.setRegion(MKCoordinateRegion(center: location.coordinate,
-                                                          span: MKCoordinateSpan(
-                                                          latitudeDelta: 0.7,
-                                                          longitudeDelta: 0.7)
-                                                        ),
-                                      animated: true)
+    mapView.setRegion(
+      MKCoordinateRegion(
+        center: location.coordinate,
+        span: .init()
+      ),
+      animated: true
+    )
     mapView.addAnnotation(currentLocationPin)
   }
-    
+
+// MARK: SetupUI
+  
     private func setupUI() {
       setupHeirarchy()
       setupCinfiguration()
@@ -51,7 +82,8 @@ class MapViewController: UIViewController {
     
     private func setupCinfiguration() {
       detailCard.layer.cornerRadius = 16
-      detailCard.backgroundColor = .blue
+      detailCard.backgroundColor = .white
+      detailCard.isHidden = true
     }
     
     private func setupConstraints() {
@@ -76,3 +108,11 @@ class MapViewController: UIViewController {
     }
     
   }
+
+// MARK: Extension
+
+extension MapViewController: MKMapViewDelegate {
+  func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+    detailCard.isHidden = false
+  }
+}
