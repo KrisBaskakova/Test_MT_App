@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A0DE6F84-221C-45F8-9308-C3161733AC40"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Test_MT_App/MapModule/MapViewController.swift"
@@ -49,6 +49,146 @@
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "createMapViewController(stop:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C21FA81-D909-421A-8508-E768270B0CCF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Test_MT_App/MapModule/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "MapViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4C21FA81-D909-421A-8508-E768270B0CCF - 91a1e77b4454a8a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Test_MT_App.MapViewController.detailCard.getter : Test_MT_App.DetailView"
+                  moduleName = "Test_MT_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/MapModule/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "4C21FA81-D909-421A-8508-E768270B0CCF - a28760c61e022754"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Test_MT_App.MapViewController.detailCard.setter : Test_MT_App.DetailView"
+                  moduleName = "Test_MT_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/MapModule/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "4C21FA81-D909-421A-8508-E768270B0CCF - 6f58f26e93cc65a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Test_MT_App.MapViewController.detailCard.modify : Test_MT_App.DetailView"
+                  moduleName = "Test_MT_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/MapModule/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "4C21FA81-D909-421A-8508-E768270B0CCF - 98e6fa17474c7f1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Test_MT_App.MapViewController.detailCard.modify : Test_MT_App.DetailView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Test_MT_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/MapModule/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "4C21FA81-D909-421A-8508-E768270B0CCF - 9af10a284f746406"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Test_MT_App.MapViewController.init(output: Test_MT_App.MapPresenterProtocol) -&gt; Test_MT_App.MapViewController"
+                  moduleName = "Test_MT_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/MapModule/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "4C21FA81-D909-421A-8508-E768270B0CCF - d35079c3997fd453"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Test_MT_App.MapViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Test_MT_App.MapViewController&gt;"
+                  moduleName = "Test_MT_App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristinabaskakova/Desktop/Test_MT_App/Test_MT_App/MapModule/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5905244A-8FC3-487B-8635-5EED3954A4D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Test_MT_App/MapModule/DetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "setupConstraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46EBF0FF-416A-402B-9C2F-D83B9423E32E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Test_MT_App/MapModule/DetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init(frame:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -37,8 +37,33 @@ class MapViewController: UIViewController, MapViewProtocol {
     super.viewDidLoad()
     output.viewDidLoad()
     setupUI()
-    setupPins()
     mapView.delegate = self
+    let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(tapDetailView))
+    detailCard.addGestureRecognizer(panGestureRecognizer)
+  }
+  
+  @objc func tapDetailView(recognizer: UIPanGestureRecognizer) {
+    
+    switch recognizer.state {
+      
+    case .began:
+      print("view tapped")
+    case .changed:
+      let viewTranslation = recognizer.translation(in: detailCard)
+      
+      let newY = detailCard.center.y + viewTranslation.y
+      
+      detailCard.center = CGPoint(x: detailCard.center.x, y: newY)
+      print(newY)
+      recognizer.setTranslation(CGPoint.zero, in: detailCard)
+    case .ended:
+      if detailCard.center.y < 792 {
+        detailCard.center.y = 865
+      }
+    default:
+      print("Nothing")
+    }
+    
   }
   
   func updateMap(with stop: Stop?) {
@@ -47,11 +72,6 @@ class MapViewController: UIViewController, MapViewProtocol {
   }
   
   // MARK: Pins setup
-  
-  private func setupPins() {
-
-    
-  }
   
   func addMapPin(with location: CLLocation) {
     
@@ -104,7 +124,7 @@ class MapViewController: UIViewController, MapViewProtocol {
       detailCard.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
       detailCard.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
       detailCard.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-      detailCard.heightAnchor.constraint(equalToConstant: 100).isActive = true
+      detailCard.heightAnchor.constraint(equalToConstant: 300).isActive = true
     }
     
   }
@@ -113,6 +133,9 @@ class MapViewController: UIViewController, MapViewProtocol {
 
 extension MapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+    guard let stop else { return }
     detailCard.isHidden = false
+    detailCard.center.y = 865
+    detailCard.setingup(with: stop)
   }
 }
